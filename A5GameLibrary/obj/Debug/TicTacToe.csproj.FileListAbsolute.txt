@@ -1,0 +1,6 @@
+C:\Users\enegrete\Downloads\A5GameLibrary\bin\Debug\TicTacToe.exe.config
+C:\Users\enegrete\Downloads\A5GameLibrary\bin\Debug\TicTacToe.exe
+C:\Users\enegrete\Downloads\A5GameLibrary\bin\Debug\TicTacToe.pdb
+C:\Users\enegrete\Downloads\A5GameLibrary\obj\Debug\TicTacToe.csprojResolveAssemblyReference.cache
+C:\Users\enegrete\Downloads\A5GameLibrary\obj\Debug\TicTacToe.exe
+C:\Users\enegrete\Downloads\A5GameLibrary\obj\Debug\TicTacToe.pdb

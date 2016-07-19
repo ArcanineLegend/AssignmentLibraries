@@ -1,0 +1,2 @@
+c:\users\enegrete\documents\visual studio 2015\Projects\2dGameLibrary\2dGameLibrary\bin\Debug\2dGameLibrary.exe.config
+C:\Users\enegrete\Documents\Visual Studio 2015\Projects\2dGameLibrary\2dGameLibrary\obj\Debug\2dGameLibrary.csprojResolveAssemblyReference.cache
