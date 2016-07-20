@@ -38,24 +38,7 @@ namespace GameLibrary
             
             return false;
         }
-        public static bool Win(Array GridArray, int CurrentRow, int CurrentColumn, Enum Token)
-        {
-            
-            return (Board.SquareValue(GridArray, CurrentRow, 0) == Token //for example 0 is actually 1 and 1 is two...
-                       && Board.SquareValue(GridArray, CurrentRow, 1) == Token
-                       && Board.SquareValue(GridArray, CurrentRow, 2) == Token
-                  || Board.SquareValue(GridArray, 0, CurrentColumn) == Token
-                       && Board.SquareValue(GridArray, 1, CurrentColumn) == Token
-                       && Board.SquareValue(GridArray, 2, CurrentColumn) == Token
-                  || CurrentRow == CurrentColumn
-                       && Board.SquareValue(GridArray, 0, 0) == Token
-                       && Board.SquareValue(GridArray, 1, 1) == Token
-                       && Board.SquareValue(GridArray, 2, 2) == Token
-                  || CurrentRow + CurrentColumn == 2
-                       && Board.SquareValue(GridArray, 0, 2) == Token
-                       && Board.SquareValue(GridArray, 1, 1) == Token
-                       && Board.SquareValue(GridArray, 2, 0) == Token);
-        }
+        
 
 
     }

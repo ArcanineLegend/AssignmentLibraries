@@ -35,7 +35,6 @@ namespace TicTacToe
 
 
         
-        Game
         char[,] board = new char[3,3];
         Player[] players;
 
@@ -135,6 +134,31 @@ namespace TicTacToe
         {
             //if three in a row or all spaces are filled
             return false;
+        }
+        public static bool Win(int CurrentRow, int CurrentColumn, Enum Token)
+        {
+
+            if (GameLibrary.SquareValue(CurrentRow, 0) == Token //for example 0 is actually 1 and 1 is two...
+                 && Board.SquareValue(CurrentRow, 1) == Token
+                 && Board.SquareValue(CurrentRow, 2) == Token
+            || Board.SquareValue(0, CurrentColumn) == Token
+                 && Board.SquareValue(1, CurrentColumn) == Token
+                 && Board.SquareValue(2, CurrentColumn) == Token
+            || CurrentRow == CurrentColumn
+                 && Board.SquareValue(0, 0) == Token
+                 && Board.SquareValue(1, 1) == Token
+                 && Board.SquareValue(2, 2) == Token
+            || CurrentRow + CurrentColumn == 2
+                 && Board.SquareValue(0, 2) == Token
+                 && Board.SquareValue(1, 1) == Token
+                 && Board.SquareValue(2, 0) == Token)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 
