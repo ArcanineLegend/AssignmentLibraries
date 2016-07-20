@@ -17,8 +17,9 @@ namespace GameLibrary
 
             while (!GameOver())
             {
+                
                 Console.WriteLine("Here is the board:");
-                Board.PrintBoard(GridArray);
+                Board.PrintBoard();
 
                 Player.TakeTurn(activePlayer);
                 //select the other player
@@ -37,7 +38,7 @@ namespace GameLibrary
             
             return false;
         }
-        public static bool Win(Array GridArray, int CurrentRow, int CurrentColumn, Token X)
+        public static bool Win(Array GridArray, int CurrentRow, int CurrentColumn, Enum Token)
         {
             
             return (Board.SquareValue(GridArray, CurrentRow, 0) == Token //for example 0 is actually 1 and 1 is two...
@@ -60,24 +61,24 @@ namespace GameLibrary
     }
     public class Board
     {
-
-        public static Array Grid(int Row, int Col)// give the Row and Col, it will create the Grid and you set it to a local Array(in game).
+        public Array GridArray;
+        public Array Grid(int Row, int Col)// give the Row and Col, it will create the Grid and you set it to a local Array(in game).
         {
-            char[ , ] GridArray = new char[Row, Col];
+            GridArray = new char[Row, Col];
             return GridArray;
         }
-        public static char SquareValue(Array GridArray, int Row, int Col)//set the saved array from the game Created above and give it to Square value to find the tokan value in the square tile.
+        public char SquareValue(int Row, int Col)//set the saved array from the game Created above and give it to Square value to find the tokan value in the square tile.
         {
             char TokenValue = GridArray[Row, Col];
             return TokenValue;
         }
-        public void PrintBoardMap(Array GridArray)
+        public void PrintBoardMap()
         {
             int position = 1; //1-based board map (done for user experience)
 
             for (int row = 0; row <= GridArray.GetUpperBound(0); row++)
             {
-                for (int column = 0; column <= GridArray.GetUpperBound(1); column++)
+                for (int column = 0; column <= GridArray.GetUpperBound(1); column++) /// use this to fix grid array issues
                 {
                     Console.Write(position++);
                     if (column < GridArray.GetUpperBound(1))
@@ -92,7 +93,7 @@ namespace GameLibrary
         /// <summary>
         /// Prints the board to the console with extra dashes for legibility
         /// </summary>
-        public void PrintBoard(Array GridArray)
+        public void PrintBoard()
         {
             Console.WriteLine();
             for (int row = 0; row <= GridArray.GetUpperBound(0); row++)
