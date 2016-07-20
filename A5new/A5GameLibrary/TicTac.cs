@@ -7,13 +7,15 @@ using GameLibrary;
 
 namespace TicTacToe
 {
-    public class TicTac
+    public class TicTac : IPlayable
     {
         static void Main(string[] args)
         {
             //TicTac p = new TicTac();
             //p.Start();
             Player p = new Player();
+            TicTac t = new TicTac();
+            Game g = new Game();
 
             Console.WriteLine("Please enter your name: ");
             p.Initialize(new ConsoleStringGetter());
@@ -160,6 +162,8 @@ namespace TicTacToe
                 return false;
             }
         }
+        public interface IPlayable(){
+
     }
 
     

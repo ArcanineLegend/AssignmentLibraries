@@ -21,7 +21,7 @@ namespace GameLibrary
                 Console.WriteLine("Here is the board:");
                 Board.PrintBoard();
 
-                Player.TakeTurn(activePlayer);
+                Player.TakeTurn(activePlayer);+-
                 //select the other player
                 indexOfCurrentPlayer = (indexOfCurrentPlayer == 0) ? 1 : 0;
                 activePlayer = players[indexOfCurrentPlayer];
